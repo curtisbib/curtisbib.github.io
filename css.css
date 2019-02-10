@@ -1,0 +1,53 @@
+.heart {
+	height: 50px;
+	width: 50px;
+	background-color: red;
+	left: 45%;
+	top: 45%;
+	margin: 0 10px;
+	position: absolute;
+	transform: rotate(45deg);
+
+	animation: beat 1s infinite;
+	}
+
+	.heart:hover {
+		background-color: black; 
+	}
+	
+	.heart:before {
+		height: 50px;
+	    width: 50px;
+		background-color: red;
+
+		border-radius: 50%; 
+		position: absolute;
+
+		left: -25px;
+		top: 0;
+
+		content: "";
+	}
+
+	.heart:after {
+		height: 50px;
+	    width: 50px;
+		background-color: red;
+
+		border-radius: 50%; 
+		position: absolute;
+
+		left: 0;
+		top: -25px;
+		
+		content: "";
+	}
+	@keyframes beat {
+		0% {
+			transform: scale(1) rotate(45deg);
+		}
+
+		50% {
+			transform: scale(2) rotate(45deg);
+		}
+	}
